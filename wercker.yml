@@ -2,7 +2,11 @@ ruby: 2.4.1
 box: ruby
 build:
   steps:
+    - echo 'gem "codeclimate-testreporter", "~> 1.0.0"' >> Gemfile
     - bundle-install
     - script:
       name: test
       code: bundle exec rake test
+    - script:
+      name: coverage
+      code: bundle exec codeclimate-test-reporter
