@@ -9,6 +9,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     cool.io (1.4.6)
+    docile (1.1.5)
     fluentd (0.14.14)
       cool.io (~> 1.4.5)
       http_parser.rb (>= 0.5.1, < 0.7.0)
@@ -29,6 +30,11 @@ GEM
     serverengine (2.0.5)
       sigdump (~> 0.2.2)
     sigdump (0.2.4)
+    simplecov (0.14.1)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
     strptime (0.1.9)
     test-unit (3.2.3)
       power_assert
@@ -46,6 +52,7 @@ DEPENDENCIES
   bundler
   fluent-plugin-pgsql_fingerprint!
   rake
+  simplecov
   test-unit
 
 BUNDLED WITH
