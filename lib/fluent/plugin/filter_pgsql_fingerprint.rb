@@ -37,7 +37,7 @@ module Fluent
 
       def fingerprint(sql)
         return sql if sql.empty?
-        PgQuery.normalize(sql)
+        PgQuery.normalize(sql).encode!(Encoding::UTF_8)
       rescue => err
         log.error "filter_pgsql_fingerprint:", error: err.to_s, error_class: e.class.to_s
         log.warn_backtrace err.backtrace
