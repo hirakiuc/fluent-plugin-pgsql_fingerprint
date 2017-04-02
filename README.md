@@ -8,7 +8,7 @@ A Fluent filter plugin to convert **postgres** sql to sql's fingerprint.
 
 ## NOTE
 
-This fluent plugin is expired by [fluent-plugin-sql_fingerprint](https://github.com/kikumoto/fluent-plugin-sql_fingerprint).
+This fluent plugin is inspired by [fluent-plugin-sql_fingerprint](https://github.com/kikumoto/fluent-plugin-sql_fingerprint).
 
 Use [fluent-plugin-sql_fingerprint](https://github.com/kikumoto/fluent-plugin-sql_fingerprint) if you want to get sql fingerprint for **mysql** sql.
 
