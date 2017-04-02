@@ -1,0 +1,1 @@
+# fluent-plugin-pgsql_fingerprint
