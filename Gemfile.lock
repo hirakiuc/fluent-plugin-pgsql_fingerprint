@@ -2,12 +2,14 @@ PATH
   remote: .
   specs:
     fluent-plugin-pgsql_fingerprint (0.0.1)
-      fluentd (>= 0.14)
-      pg_query (>= 0.11)
+      fluentd (~> 0.14)
+      pg_query (~> 0.11)
 
 GEM
   remote: https://rubygems.org/
   specs:
+    codeclimate-test-reporter (1.0.7)
+      simplecov
     cool.io (1.4.6)
     docile (1.1.5)
     fluentd (0.14.14)
@@ -49,11 +51,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler
+  bundler (~> 1.13)
+  codeclimate-test-reporter (~> 1.0.0)
   fluent-plugin-pgsql_fingerprint!
-  rake
+  rake (~> 12.0)
   simplecov
-  test-unit
+  test-unit (~> 3.2)
 
 BUNDLED WITH
    1.14.6

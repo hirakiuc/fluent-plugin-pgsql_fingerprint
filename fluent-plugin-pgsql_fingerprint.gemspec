@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email = ['hirakiuc@gmail.com']
 
   spec.summary = "A Fluent filter plugin to convert postgres sql to sql's fingerprint"
-  spec.description = spec.summary
+  spec.description = "A Fluent filter plugin to convert postgres sql to sql's fingerprint. (for fluentd v0.14)"
   spec.homepage = "https://github.com/hirakiuc/fluent-plugin-pgsql_fingerprint"
   spec.license = "MIT"
 
@@ -16,9 +16,9 @@ Gem::Specification.new do |spec|
   spec.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency 'fluentd', '>= 0.14'
-  spec.add_runtime_dependency 'pg_query', '>= 0.11'
-  spec.add_development_dependency 'bundler'
-  spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'test-unit'
+  spec.add_runtime_dependency 'fluentd', '~> 0.14'
+  spec.add_runtime_dependency 'pg_query', '~> 0.11'
+  spec.add_development_dependency 'bundler', '~> 1.13'
+  spec.add_development_dependency 'rake', '~> 12.0'
+  spec.add_development_dependency 'test-unit', '~> 3.2'
 end
