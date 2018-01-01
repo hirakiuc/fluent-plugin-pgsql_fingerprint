@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = 'fluent-plugin-pgsql_fingerprint'
-  spec.version = '0.0.1'
+  spec.version = '0.0.2'
   spec.authors = ['Daisuke Hirakiuchi']
   spec.email = ['hirakiuc@gmail.com']
 
