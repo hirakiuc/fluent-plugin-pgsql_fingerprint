@@ -15,12 +15,6 @@ jobs:
         with:
           ruby-version: '2.4'
           bundle-cache: true
-      - name: install libpq-dev
-        run: |
-          curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-          echo "deb http://apt.postgresql.org/pub/repos/apt `lsb_release -cs`-pgdg main" | tee /etc/apt/sources.list.d/pgdg.list
-          sudo apt update
-          sudo apt install libpq-dev cmake -y 
       - name: Install dependencies
         run: bundle install
       - name: Run Tests
