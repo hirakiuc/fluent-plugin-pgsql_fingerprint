@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fluent-plugin-pgsql_fingerprint (0.0.2)
+    fluent-plugin-pgsql_fingerprint (0.1.0)
       fluentd (~> 1.14)
       pg_query (~> 1.3)
 
