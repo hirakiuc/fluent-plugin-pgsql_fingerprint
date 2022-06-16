@@ -16,7 +16,8 @@ And this fluent plugin depends on [pg_query gem](https://github.com/lfittl/pg_qu
 
 ## Requirements
 
-Fluentd >= v0.14 (**not latest stable version**)
+- Fluentd ~> 1.14
+- libpq to build the [pg_query gem](https://github.com/lfittl/pg_query)
 
 ## Install
 
