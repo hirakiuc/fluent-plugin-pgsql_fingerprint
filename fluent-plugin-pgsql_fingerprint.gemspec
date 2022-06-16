@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'fluentd', '~> 1.14'
   spec.add_runtime_dependency 'pg_query', '~> 1.3'
-  spec.add_development_dependency 'bundler', '~> 1.13'
+  spec.add_development_dependency 'bundler', '>= 2.2.33'
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'test-unit', '~> 3.5'
 end
