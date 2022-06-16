@@ -11,9 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Set up Ruby
-        uses: ruby/setup-ruby
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.4'
+          bundle-cache: true
       - name: install libpq-dev
         run: |
           curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
