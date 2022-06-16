@@ -54,7 +54,7 @@ class PgsqlFingerprintFilterTest < Test::Unit::TestCase
       records = filter('', messages)
       assert_equal(2, records.size)
 
-      assert_equal %|SELECT * FROM weather WHERE city = ? AND prcp > ?;|, records[0]['fingerprint']
+      assert_equal %|SELECT * FROM weather WHERE city = $1 AND prcp > $2;|, records[0]['fingerprint']
       assert_equal %|SELECT city, max(temp_lo) FROM weather WHERE city LIKE ? GROUP BY city HAVING max(temp_lo) < ?;|, records[1]['fingerprint']
     end
 
@@ -66,7 +66,7 @@ class PgsqlFingerprintFilterTest < Test::Unit::TestCase
       records = filter(configs, messages('target'))
       assert_equal(2, records.size)
 
-      assert_equal %|SELECT * FROM weather WHERE city = ? AND prcp > ?;|, records[0]['normalized_query']
+      assert_equal %|SELECT * FROM weather WHERE city = $1 AND prcp > $2;|, records[0]['normalized_query']
       assert_equal %|SELECT city, max(temp_lo) FROM weather WHERE city LIKE ? GROUP BY city HAVING max(temp_lo) < ?;|, records[1]['normalized_query']
     end
   end
